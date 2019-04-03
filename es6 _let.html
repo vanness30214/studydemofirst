@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+</head>
+<body>
+<ul id="cc">
+
+</ul>
+</body>
+</html>
+<script>
+    (function(){
+       var ul=document.getElementById("cc");
+       var li=null;
+       var fragment=document.createDocumentFragment();
+       for (let i=0;i<6;i++){
+           li=document.createElement("li");
+           li.appendChild(document.createTextNode("item"+i));
+            fragment.appendChild(li);
+            li.addEventListener("mouseenter",function () {
+               this.style.color="red";
+            });
+           li.addEventListener("mouseleave",function () {
+               this.style.color="black";
+           })
+       }
+       ul.appendChild(fragment)
+
+    })()
+</script>

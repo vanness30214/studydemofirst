@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>使用拖拽更改支付宝的默认付款方式</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <style type="text/css">
+        li{
+            list-style:none;
+            width:200px;
+            border: 1px dashed gray;
+            padding:5px 0;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<h3>使用拖拽更改支付宝的默认付款方式</h3>
+<ul id="card">
+    <li >招商信用卡</li>
+    <li >交通信用卡</li>
+    <li >中信储蓄卡</li>
+    <li >建行储蓄卡</li>
+    <li >蚂蚁花呗</li>
+    <li >余额宝</li>
+    <li >余额</li>
+</ul>
+<img src="http://climg.mukewang.com/59705a7b0001736902000080.png" class="hide">
+<script>
+    (function($){
+        var dragSrc;
+        var m,n;
+        $('li').attr('draggable','true');
+        $('li').each(function(index,ele){
+            $(ele).on("dragstart",function(e){
+                dragSrc = this;
+                m = $(this).index();
+                e.originalEvent.dataTransfer.setData("text",this.innerText);
+                e.originalEvent.dataTransfer.setDragImage($('.hide').clone().removeClass('hide')[0],90,0);
+            }).on("dragover",function(e){
+                e.preventDefault();
+            }).on("drop",function(e){
+                e.preventDefault();
+                if(dragSrc != this){
+
+// dragSrc.innerText = this.innerText;
+// this.innerText = e.originalEvent.dataTransfer.getData("text");
+                    n = $(this).index();
+                    if(n<m){
+                        $(dragSrc).insertBefore(this);
+                    }else{
+                        $(dragSrc).insertAfter(this);
+                    }
+                }
+
+            })
+        })
+    })(jQuery);
+</script>
+</body>
+</html>

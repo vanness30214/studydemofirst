@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+1.1@Admin
+</body>
+</html>
+<script type="text/javascript">
+    var str = 'cctv have [cctv1]、[cctv2]、[cctv3]、[cctv4]……';
+    var userInput = /\[.*?\]/;
+    var fn=new RegExp(userInput,'i');
+    console.log(fn.test(str));
+    console.log(fn.exec(str));
+
+</script>
