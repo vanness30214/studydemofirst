@@ -35,10 +35,12 @@
 
     parent.addEventListener("click",function(e){
         console.log("click-parent");
+        e.stopPropagation();
     },false);
 
     child.addEventListener("click",function(e){
         console.log("click-child");
+        e.stopPropagation();
     },false);
 </script>
 </body>
