@@ -5,7 +5,10 @@
     <title>Title</title>
 </head>
 <body>
-<div id="id1" data-one="hi"></div>
+<span>dsadsa</span>
+<div id="id1" data-one="hi">
+    <div class="inner">das</div>
+</div>
 <div class="class1"></div>
 </body>
 </html>
@@ -13,6 +16,7 @@
     var id = document.getElementById("id1");//id
     var tagName =document.getElementsByTagName("div");//标签获取
     var classname= document.getElementsByClassName("class1");//class ie8up
+    var inner=document.getElementsByClassName("inner");
     console.log(id);
     console.log(tagName);
     console.log(classname);
@@ -30,6 +34,20 @@
     var nodetext=document.createTextNode("新内容");
     node.appendChild(nodetext);
     id.appendChild(node);
+    var node1=document.createElement("span");
+    var text1=document.createTextNode("content");
+    node1.appendChild(text1);
+    id.appendChild(node1);
+////
 
-
+    console.log( id.parentNode);//父节点
+    console.log( id.children);//子节点
+    console.log("------");
+    console.log( id.firstChild);//第一个节点
+    console.log( id.lastChild);//最后一个节点
+    console.log( id.nextSibling);//下一个同级元素
+    console.log(id.previousSibling);
+id.addEventListener("click",function (event) {
+    alert("事件绑定")
+},false)
 </script>
