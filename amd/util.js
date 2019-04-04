@@ -8,6 +8,6 @@ define(function () {
                 return '2017年6月20日'
             }
         }
-    }
+    };
     return util
-})
+});

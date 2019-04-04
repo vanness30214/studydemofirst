@@ -3,6 +3,6 @@ define(['./a-util.js'], function (aUtil) {
         printDate: function (date) {
             console.log(aUtil.aGetFormatDate(date))
         }
-    }
+    };
     return a
-})
+});
