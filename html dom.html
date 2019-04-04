@@ -5,15 +5,31 @@
     <title>Title</title>
 </head>
 <body>
-<div id="id1"></div>
+<div id="id1" data-one="hi"></div>
 <div class="class1"></div>
 </body>
 </html>
 <script>
     var id = document.getElementById("id1");//id
     var tagName =document.getElementsByTagName("div");//标签获取
-    var classname= document.getElementsByClassName("class1");//class
+    var classname= document.getElementsByClassName("class1");//class ie8up
     console.log(id);
     console.log(tagName);
     console.log(classname);
+    var getatter=id.getAttribute("data-one");//获取属性返回值
+    console.log(getatter);
+    id.setAttribute("data-one","hello");//改变属性值
+
+    //创建节点
+    var nodelist=document.createElement("h1");
+    var textnode=document.createTextNode("text");
+    nodelist.appendChild(textnode);
+    id.appendChild(nodelist);
+    // id.removeChild(newlist)//删除节点
+    var node=document.createElement("span");
+    var nodetext=document.createTextNode("新内容");
+    node.appendChild(nodetext);
+    id.appendChild(node);
+
+
 </script>
