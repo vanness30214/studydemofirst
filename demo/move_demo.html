@@ -42,27 +42,27 @@
     <div class="title">title</div>
 </div>
 
-<!--<script>-->
-<!--    var ismousedown =false;-->
-<!--    var mouselog ={};-->
-<!--    $(".title").on("mousedown",function (e) {-->
-<!--        ismousedown = true;-->
-<!--        mouselog.x =e.pageX;-->
-<!--        mouselog.y =e.pageY;-->
-<!--    }).on("mousemove",function (e) {-->
-<!--        if(ismousedown){-->
-<!--    var dialog =$(".box");-->
-<!--    var tragetX=parseInt(dialog.css("left"))+e.pageX-mouselog.x;-->
-<!--    var tragetY=parseInt(dialog.css("top"))+e.pageY-mouselog.y;-->
-<!--    dialog.css("left",tragetX+"px");-->
-<!--    dialog.css("top",tragetY+"px");-->
-<!--    mouselog.x =e.pageX;-->
-<!--    mouselog.y =e.pageY;-->
-<!--        }-->
-<!--    }).on("mouseup",function () {-->
-<!--        ismousedown =false;-->
-<!--        mouselog ={};-->
-<!--    });-->
-<!--</script>-->
+<script>
+    var ismousedown =false;
+    var mouselog ={};
+    $(".title").on("mousedown",function (e) {
+        ismousedown = true;
+        mouselog.x =e.pageX;
+        mouselog.y =e.pageY;
+    }).on("mousemove",function (e) {
+        if(ismousedown){
+    var dialog =$(".box");
+    var tragetX=parseInt(dialog.css("left"))+e.pageX-mouselog.x;
+    var tragetY=parseInt(dialog.css("top"))+e.pageY-mouselog.y;
+    dialog.css("left",tragetX+"px");
+    dialog.css("top",tragetY+"px");
+    mouselog.x =e.pageX;
+    mouselog.y =e.pageY;
+        }
+    }).on("mouseup",function () {
+        ismousedown =false;
+        mouselog ={};
+    });
+</script>
 </body>
 </html>
