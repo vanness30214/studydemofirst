@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animation演示</title>
+    <style>
+        div
+        {
+            width:100px;
+            height:100px;
+            background:red;
+            position:relative;
+            animation-name:myfirst;
+            /*动画名字*/
+            animation-duration:5s;
+            /*动画时间*/
+            animation-timing-function:linear;
+            /*动画运行动作属性*/
+            animation-delay:1s;
+            /*动画延迟*/
+            animation-iteration-count:infinite;
+            /*播放次数，infinite无线次*/
+            animation-direction:alternate;
+            /*先执行一遍动画，然后再反向执行一遍动画*/
+            animation-play-state:running;
+            /*暂停动画*/
+            /* Safari and Chrome: */
+            -webkit-animation-name:myfirst;
+            -webkit-animation-duration:5s;
+            -webkit-animation-timing-function:linear;
+            -webkit-animation-delay:1s;
+            -webkit-animation-iteration-count:infinite;
+            -webkit-animation-direction:alternate;
+            -webkit-animation-play-state:running;
+        }
+
+        @keyframes myfirst /*定义动画名*/
+        {
+            0%   {background:red; left:0px; top:0px;} /*定义起始帧样式，0%相当于from*/
+            25%  {background:yellow; left:200px; top:0px;}
+            50%  {background:blue; left:200px; top:200px;}
+            75%  {background:green; left:0px; top:200px;}
+            100% {background:red; left:0px; top:0px;} /*定义结束帧样式，100%相当于to*/
+        }
+
+        @-webkit-keyframes myfirst /* Safari and Chrome */
+        {
+            0%   {background:red; left:0px; top:0px;}
+            25%  {background:yellow; left:200px; top:0px;}
+            50%  {background:blue; left:200px; top:200px;}
+            75%  {background:green; left:0px; top:200px;}
+            100% {background:red; left:0px; top:0px;}
+        }
+    </style>
+</head>
+<body>
+<p>该实例在 Internet Explorer 9 及更早 IE 版本是无效的。</p>
+<div></div>
+</body>
+</html>

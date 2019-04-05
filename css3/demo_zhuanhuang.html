@@ -13,8 +13,15 @@
         }
 
         .transform1 {
-            /*transform: rotate(45deg);*/
-            transform: rotate3d(1,1,1,45deg);
+            transform: rotate(0deg);
+            /*transform: rotate3d(1,1,1,45deg);*/
+            /*旋转*/
+        }
+
+        .transform1:hover {
+            transform: rotate(270deg);
+            transition-duration: 100ms;
+            /*transform: rotate3d(1,1,1,45deg);*/
             /*旋转*/
         }
 
@@ -23,15 +30,35 @@
             /*缩放*/
         }
 
+        .transform2:hover {
+            transform: scale(1);
+            transition-duration: 100ms;
+            /*缩放*/
+        }
+
         .transform3 {
-            transform: skew(30deg);
+            /*transform: skew(30deg);*/
+            animation-name: circle_inner;
+            animation-duration: 2s;
+            animation-timing-function: linear ;
+            animation-iteration-count: infinite;
             /*扭曲*/
+        }
+
+        @keyframes circle_inner {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
         }
 
         .transform4 {
             transform: translate(10px, 20px);
             /*移动*/
         }
+
         .transform5 {
 
             /*移动*/
@@ -45,6 +72,7 @@
 <div class="div transform4"></div>
 <div class="div transform5"></div>
 <div class="div transform6"></div>
+
 </body>
 </html>
 <!---
