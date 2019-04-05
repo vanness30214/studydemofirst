@@ -10,20 +10,27 @@
             height:100px;
             background:red;
             position:relative;
+
+            /*animation:myfirst 5s infinite;*/
+            /*简写名称-运行时间-动作属性
+           */
+
             animation-name:myfirst;
             /*动画名字*/
             animation-duration:5s;
             /*动画时间*/
             animation-timing-function:linear;
             /*动画运行动作属性*/
+            /**********************************/
+
             animation-delay:1s;
             /*动画延迟*/
             animation-iteration-count:infinite;
-            /*播放次数，infinite无线次*/
+            /*播放次数，infinite无限次*/
             animation-direction:alternate;
-            /*先执行一遍动画，然后再反向执行一遍动画*/
+            /*是否应该轮流反向播放动画。*/
             animation-play-state:running;
-            /*暂停动画*/
+            /*是否暂停动画*/
             /* Safari and Chrome: */
             -webkit-animation-name:myfirst;
             -webkit-animation-duration:5s;
