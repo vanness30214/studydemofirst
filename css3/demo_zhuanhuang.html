@@ -4,19 +4,37 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        .div{
+        .div {
             height: 50px;
             width: 100px;
             background: aquamarine;
             margin: 50px 50px;
             display: inline-block;
         }
-        .transform1{
-            transform:rotate(45deg);
-        }
-        .transform2{
-           transform:scale();
 
+        .transform1 {
+            /*transform: rotate(45deg);*/
+            transform: rotate3d(1,1,1,45deg);
+            /*旋转*/
+        }
+
+        .transform2 {
+            transform: scale(0.5);
+            /*缩放*/
+        }
+
+        .transform3 {
+            transform: skew(30deg);
+            /*扭曲*/
+        }
+
+        .transform4 {
+            transform: translate(10px, 20px);
+            /*移动*/
+        }
+        .transform5 {
+
+            /*移动*/
         }
     </style>
 </head>
@@ -29,3 +47,9 @@
 <div class="div transform6"></div>
 </body>
 </html>
+<!---
+ms-transform:功能;/*IE9*/
+-moz-transform:功能;/*Firefox*/
+-webkit-transform:功能;/*Safari和chrome*/
+-o-transform:功能;/*Opera*/
+-->
