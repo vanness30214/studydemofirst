@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>模版字符串</title>
+</head>
+
+<body>
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+<script type="text/javascript">
+    const tmpl = function() {
+        return {
+            title: "前端",
+            data: [{
+                title: '布局基础',
+                date: ["html", "css"]
+            }, {
+                title: '网页特效',
+                date: ["javascript", "jquery"]
+            }, {
+                title: '框架',
+                date: ["bootstrap", "vue"]
+            }]
+        }
+    };
+    const {title:titlename,data:datalist }= tmpl();
+    let arr=[];
+    datalist.forEach(function ({title,date}) {
+        arr.push(
+            `<li>标题：${title}；内容：${date}</li>`
+        )
+    });
+    let ul =document.createElement("ul");
+    ul.innerHTML=arr.join('');
+    document.body.appendChild(ul);
+
+
+
+
+</script>
+</body>
+</html>
