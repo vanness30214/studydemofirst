@@ -3,31 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
 </head>
 <body>
 
 </body>
 </html>
-<script>
-    let url = ['http://climg.mukewang.com/5b16558d00011ed506000338.jpg', 'http://climg.mukewang.com/5b165603000146ca06000338.jpg ', 'http://climg.mukewang.com/5b1656140001c89906000338.jpg'];
-    function a(url, i=0) {
-        return new Promise(resolve => {
-            let imgbox = document.createElement("img");
-            imgbox.setAttribute("src", url[i]);
-            document.body.appendChild(imgbox);
-            console.log(i);
+<!--<script>-->
+<!--    let url = ['http://climg.mukewang.com/5b16558d00011ed506000338.jpg', 'http://climg.mukewang.com/5b165603000146ca06000338.jpg ', 'http://climg.mukewang.com/5b1656140001c89906000338.jpg'];-->
+
+<!--    function a(url, i = 0) {-->
+<!--        return new Promise(resolve => {-->
+<!--            let imgbox = document.createElement("img");-->
+<!--            imgbox.setAttribute("src", url[i]);-->
+<!--            document.body.appendChild(imgbox);-->
+<!--            console.log(i);-->
+<!--            setTimeout(function () {-->
+<!--                resolve();-->
+<!--            }, 1000)-->
+<!--        })-->
+<!--    }-->
+
+<!--    a([...url])-->
+<!--        .then(() => {-->
+<!--            return a(url, 1);-->
+<!--        })-->
+<!--        .then(() => {-->
+<!--            return a(url, 2);-->
+<!--        })-->
+<!--</script>-->
+
+<script type="text/javascript">
+
+
+    function cook() {
+        console.log('开始做饭。');
+        var p = new Promise(function (resolve, reject) {
             setTimeout(function () {
-                resolve();
-            }, 1000)
-        })
+                console.log('做饭完毕！');
+                resolve('鸡蛋炒饭');
+            }, 1000);
+        });
+        return p;
     }
-    a([...url])
-        .then(function () {
-            return a(url, 1);
+
+    function eat(data) {
+        console.log('开始吃饭：' + data);
+        var p = new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                console.log('吃饭完毕!');
+                resolve('一块碗和一双筷子');
+            }, 2000);
+        });
+        return p;
+    }
+
+    function wash(data) {
+        console.log('开始洗碗：' + data);
+        var p = new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                console.log('洗碗完毕!');
+                resolve('干净的碗筷');
+            }, 2000);
+        });
+        return p;
+    }
+
+    cook()
+        .then((p) => {
+            return eat(p)
         })
-        .then(function () {
-            return a(url, 2);
+        .then((p) => {
+
+            return wash(p)
+
         })
+
 
 
 
