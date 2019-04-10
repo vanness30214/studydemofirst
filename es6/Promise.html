@@ -32,54 +32,75 @@
 <!--            return a(url, 2);-->
 <!--        })-->
 <!--</script>-->
-
-<script type="text/javascript">
-
-
-    function cook() {
-        console.log('开始做饭。');
-        var p = new Promise(function (resolve, reject) {
-            setTimeout(function () {
-                console.log('做饭完毕！');
-                resolve('鸡蛋炒饭');
-            }, 1000);
-        });
-        return p;
-    }
-
-    function eat(data) {
-        console.log('开始吃饭：' + data);
-        var p = new Promise(function (resolve, reject) {
-            setTimeout(function () {
-                console.log('吃饭完毕!');
-                resolve('一块碗和一双筷子');
-            }, 2000);
-        });
-        return p;
-    }
-
-    function wash(data) {
-        console.log('开始洗碗：' + data);
-        var p = new Promise(function (resolve, reject) {
-            setTimeout(function () {
-                console.log('洗碗完毕!');
-                resolve('干净的碗筷');
-            }, 2000);
-        });
-        return p;
-    }
-
-    cook()
-        .then((p) => {
-            return eat(p)
-        })
-        .then((p) => {
-
-            return wash(p)
-
+<script>
+    let imgs = ['http://climg.mukewang.com/5b16558d00011ed506000338.jpg', 'http://climg.mukewang.com/5b165603000146ca06000338.jpg ', 'http://climg.mukewang.com/5b1656140001c89906000338.jpg'];
+    const loadImg=(src)=>{
+        return new Promise((resolve,reject)=>{
+            const  img=new Image();
+            img.src=src;
+            img.onload=()=>{
+                resolve(img)
+            };
+            img.onerror =(e)=>{
+                reject(e)
+            }
         })
 
 
-
+    };
+    Promise.all(imgs.map(src=>loadImg(src))).then((arr)=>{
+        arr.forEach((img)=>{
+            document.body.appendChild(img)
+        })
+    })
 
 </script>
+<!--<script type="text/javascript">-->
+
+
+<!--    function cook() {-->
+<!--        console.log('开始做饭。');-->
+<!--        var p = new Promise(function (resolve, reject) {-->
+<!--            setTimeout(function () {-->
+<!--                console.log('做饭完毕！');-->
+<!--                resolve('鸡蛋炒饭');-->
+<!--            }, 1000);-->
+<!--        });-->
+<!--        return p;-->
+<!--    }-->
+
+<!--    function eat(data) {-->
+<!--        console.log('开始吃饭：' + data);-->
+<!--        var p = new Promise(function (resolve, reject) {-->
+<!--            setTimeout(function () {-->
+<!--                console.log('吃饭完毕!');-->
+<!--                resolve('一块碗和一双筷子');-->
+<!--            }, 2000);-->
+<!--        });-->
+<!--        return p;-->
+<!--    }-->
+
+<!--    function wash(data) {-->
+<!--        console.log('开始洗碗：' + data);-->
+<!--        var p = new Promise(function (resolve, reject) {-->
+<!--            setTimeout(function () {-->
+<!--                console.log('洗碗完毕!');-->
+<!--                resolve('干净的碗筷');-->
+<!--            }, 2000);-->
+<!--        });-->
+<!--        return p;-->
+<!--    }-->
+
+<!--    cook()-->
+<!--        .then((p) => {-->
+<!--            return eat(p)-->
+<!--        })-->
+<!--        .then((p) => {-->
+
+<!--            return wash(p)-->
+
+<!--        })-->
+<!--       -->
+
+
+<!--</script>-->
