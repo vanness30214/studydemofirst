@@ -7,7 +7,9 @@ import demo3 from '@/page/demo3/index'
 import demo4 from '@/page/demo4/index'
 import demo5 from '@/page/demo5/index'
 import demo6 from '@/page/demo6/index'
-
+import demo7 from '@/page/demo7/index'
+import demo8 from '@/page/demo8/index'
+import demo9 from '@/page/demo9/index'
 
 Vue.use(Router)
 
@@ -43,6 +45,18 @@ export default new Router({
       path: '/demo6',
       name: 'demo6',
       component: demo6
+    },{
+      path: '/demo7',
+      name: 'demo7',
+      component: demo7
+    },{
+      path: '/demo8',
+      name: 'demo8',
+      component: demo8
+    },{
+      path: '/demo9',
+      name: 'demo9',
+      component: demo9
     }
   ]
 })
