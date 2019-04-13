@@ -15,7 +15,8 @@
         show:true
       }
     }, mounted() {
-
+      alert(this.$route.params.userId);
+      alert(this.$route.query.uid)
     },
     methods:{
 

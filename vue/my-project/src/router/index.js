@@ -10,7 +10,8 @@ import demo6 from '@/page/demo6/index'
 import demo7 from '@/page/demo7/index'
 import demo8 from '@/page/demo8/index'
 import demo9 from '@/page/demo9/index'
-
+import demo10 from '@/page/demo10/index'
+import demo11 from '@/page/demo11/index'
 Vue.use(Router)
 
 export default new Router({
@@ -54,9 +55,17 @@ export default new Router({
       name: 'demo8',
       component: demo8
     },{
-      path: '/demo9',
+      path: '/demo9:userId',
       name: 'demo9',
       component: demo9
+    },{
+      path: '/demo10',
+      name: 'demo10',
+      component: demo10
+    },{
+      path: '/demo11',
+      name: 'demo11',
+      component: demo11
     }
   ]
 })
