@@ -12,6 +12,7 @@ import demo8 from '@/page/demo8/index'
 import demo9 from '@/page/demo9/index'
 import demo10 from '@/page/demo10/index'
 import demo11 from '@/page/demo11/index'
+import demo12 from '@/page/demo12/index'
 Vue.use(Router);
 
 export default new Router({
@@ -66,6 +67,10 @@ export default new Router({
       path: '/demo11',
       name: 'demo11',
       component: demo11
+    },{
+      path: '/demo12',
+      name: 'demo12',
+      component: demo12
     }
   ]
 })
