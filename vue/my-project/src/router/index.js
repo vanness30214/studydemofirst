@@ -12,7 +12,7 @@ import demo8 from '@/page/demo8/index'
 import demo9 from '@/page/demo9/index'
 import demo10 from '@/page/demo10/index'
 import demo11 from '@/page/demo11/index'
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
 
