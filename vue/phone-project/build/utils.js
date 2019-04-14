@@ -27,11 +27,11 @@ exports.cssLoaders = function (options) {
     options: {
       sourceMap: options.sourceMap
     }
-  };
-  var px2remLoader ={
-    loader:'px2rem-loader',
-    options:{
-      remUnit:50
+  }
+  var px2remLoader = {
+    loader: 'px2rem-loader',
+    options: {
+      remUnit: 50
     }
   };
 

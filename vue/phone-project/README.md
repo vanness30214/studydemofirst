@@ -1,4 +1,4 @@
-# demo-phone
+# phone-project
 
 > A Vue.js project
 
