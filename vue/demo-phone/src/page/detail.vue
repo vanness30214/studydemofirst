@@ -12,7 +12,7 @@
 
 <style scoped>
   .detail-page{
-    width: 20px;
+    width: 30px;
     height: 30px;/*no*/
   }
 </style>
