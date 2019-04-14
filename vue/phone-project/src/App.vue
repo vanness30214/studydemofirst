@@ -16,6 +16,12 @@ export default {
   padding: 0;
   list-style: none;
 }
+body{
+  max-width: 768px;
+}
+  a{
+    text-decoration: none;
+  }
 </style>
 
 

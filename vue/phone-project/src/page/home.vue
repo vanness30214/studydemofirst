@@ -4,21 +4,23 @@
 
     <ul class="nav">
       <li v-for="item in arrList">
-        <img :src="item.imgUrl" />
+        <img :src="item.imgUrl"/>
         <span>{{item.name}}</span>
       </li>
     </ul>
     <v-course :arrList="array"></v-course>
-
+    <v-footer ></v-footer>
   </div>
 </template>
 <script>
   import Header from "@/components/header/"
+  import Course from '@/components/course/'
+  import Footer from '@/components/footer'
   import webImg from "@/assets/web.png"
   import move from "@/assets/move.png"
   import data from "@/assets/data.png"
   import bigdata from "@/assets/bigdata.png"
-  import Course from '@/components/course/'
+
 
   import course1 from "@/assets/course1.jpg";
   import course2 from "@/assets/course2.jpg";
@@ -27,25 +29,25 @@
   import course5 from "@/assets/course5.jpg";
 
 
-  export default{
-    data(){
-      return{
-        arrList:[],
-        array:[]
+  export default {
+    data() {
+      return {
+        arrList: [],
+        array: []
       }
     },
-    mounted(){
+    mounted() {
       this.arrList = [{
-        imgUrl : webImg,
+        imgUrl: webImg,
         name: '前端开发'
-      },{
-        imgUrl : move,
+      }, {
+        imgUrl: move,
         name: '后端开发'
-      },{
-        imgUrl : data,
+      }, {
+        imgUrl: data,
         name: '数据库'
-      },{
-        imgUrl : bigdata,
+      }, {
+        imgUrl: bigdata,
         name: '云计算'
       }];
       this.array = [
@@ -86,14 +88,15 @@
         }
       ];
     },
-    components:{
+    components: {
       'v-header': Header,
-      'v-course':Course
+      'v-course': Course,
+      'v-footer': Footer,
     }
   }
 </script>
 <style scoped>
-  .home-page .nav{
+  .home-page .nav {
     height: 100px;
     padding-top: 44px;
     background: #F3F5F7;
@@ -101,13 +104,18 @@
     white-space: nowrap;
     font-size: 0;
   }
-  .nav li{
+  .nav{
+    display: flex;
+    justify-content: center;
+  }
+  .nav li {
     width: 88px;
     display: inline-block;
     text-align: center;
     font-size: 14px;
   }
-  .nav li img{
+
+  .nav li img {
     display: block;
     width: 32px;
     margin: 20px auto 12px;

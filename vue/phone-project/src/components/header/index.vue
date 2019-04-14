@@ -14,7 +14,7 @@
   .c-header {
     position: fixed;
     z-index: 3;
-    width: 375px;
+    width: 100%;
     top: 0;
     background: #fff;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10);
@@ -23,6 +23,7 @@
   .header-ul {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 
   }
 
