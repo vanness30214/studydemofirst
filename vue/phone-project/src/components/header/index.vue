@@ -21,11 +21,12 @@
   }
 
   .header-ul {
-    font-size: 0;
+    display: flex;
+    flex-direction: row;
+
   }
 
   .header-ul li {
-    display: inline-block;
     padding-left: 20px;
     font-size: 16px;
     color: #71777D;
