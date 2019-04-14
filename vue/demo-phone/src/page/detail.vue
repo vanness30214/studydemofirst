@@ -13,5 +13,6 @@
 <style scoped>
   .detail-page{
     width: 20px;
+    height: 30px;/*no*/
   }
 </style>
