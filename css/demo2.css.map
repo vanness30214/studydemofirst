@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAQA,IAAI,CAPF,OAAO,CAAE,YAAY,CAEnB,SAAI,CAAE,IAAI,CACV,WAAM,CAAE,IAAI,CAEd,KAAK,CAAE,GAAG",
+"sources": ["../sass/demo2.scss"],
+"names": [],
+"file": "demo2.css"
+}

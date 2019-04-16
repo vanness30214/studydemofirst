@@ -1,28 +1,112 @@
-$abc:red !default;
-$efg:blue;
-$img:'abc.jpg';
-$list:(100px,200px,300px);
-$map:(width:100px,height:200px,right:300px);
-.div{
+$abc: red !default;
+$efg: blue;
+$img: 'abc.jpg';
+$list: (100px, 200px, 300px);
+$map: (width:100px, height:200px, right:300px);
+.div {
   color: red;
-
-
 }
-.div1{
+
+.div1 {
   color: red;
   background-image: url('./ss/#{$img}');
-  width: nth($list,2);
-  height: nth($list,1);
+  width: nth($list, 2);
+  height: nth($list, 1);
 }
-//map
-.div2{
-  width: map_get($map,width);
-  height: map_get($map,height);
-  right: map_get($map,right);
-}
-.div3{
-  @each $key,$value in map{
-    #{$key}:$value;
 
+//map
+.div2 {
+  width: map_get($map, width);
+  height: map_get($map, height);
+  right: map_get($map, right);
+}
+
+//$map:(width:100px,height:200px,right:300px);
+.div3 {
+  @each $key, $value in $map {
+    #{$key}: $value;
   }
 }
+
+/*混合类型*/
+@mixin demo {
+  display: inline-block;
+  font: {
+    size: 18px;
+    weight: bold;
+  };
+  color: red;
+}
+
+@mixin demo2($width,$height) {
+  width: $width;
+  height: $height;
+}
+
+/*引入*/
+.div {
+  @include demo;
+  @include demo2(100px, 200px)
+}
+
+.div2 {
+  margin: 10px;
+}
+
+/*继承*/
+.divext {
+  @extend .div2;
+  z-index: 12
+}
+
+/*for*/
+$list: (1, 2, 3, 4, 5, 6);
+@for $i from 1 through length($list) {
+  .item#{$i} {
+    width: 1px *$i;
+  }
+}
+
+/*while*/
+$i: 6;
+@while $i >0 {
+  .itema#{$i} {
+    width: 1px *$i;
+  }
+  $i: $i - 1;
+}
+
+$number1: 70;
+$number2: 4.5;
+$number3: 4.2;
+$number4: 4.2;
+$number5: -3;
+$number6: 20;
+$number7: 30;
+$number8: 70;
+.divs {
+  zoom: percentage($number1); //百分比
+  zoom: round($number2); //四舍五入
+  zoom: ceil($number3); //四舍五入取上
+  zoom: floor($number4); //四舍五入取下
+  zoom: abs($number5); //绝对值
+  zoom: min($number6, $number7); //最小
+  zoom: max($number6, $number7); //最大
+  zoom: random($number8); //随机
+}
+
+/*list*/
+$listl: (1, 2, 3, 4, 5, 6);
+.so {
+  zoom: length($listl);
+  zoom: nth($listl, 2);
+  zoom: set_nth($listl,1,'x');
+  zoom: join($listl,(6,7,8));
+  zoom: append($listl,'666');
+  zoom: index($listl,2);
+
+
+
+
+}
+

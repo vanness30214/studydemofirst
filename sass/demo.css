@@ -1,0 +1,107 @@
+.div {
+    color: red
+}
+
+.div1 {
+    color: red;
+    background-image: url("./ss/abc.jpg");
+    width: 200px;
+    height: 100px
+}
+
+.div2, .divext {
+    width: 100px;
+    height: 200px;
+    right: 300px
+}
+
+.div3 {
+    width: 100px;
+    height: 200px;
+    right: 300px
+}
+
+.div {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+    width: 100px;
+    height: 200px
+}
+
+.div2, .divext {
+    margin: 10px
+}
+
+.divext {
+    z-index: 12
+}
+
+.item1 {
+    width: 1px
+}
+
+.item2 {
+    width: 2px
+}
+
+.item3 {
+    width: 3px
+}
+
+.item4 {
+    width: 4px
+}
+
+.item5 {
+    width: 5px
+}
+
+.item6 {
+    width: 6px
+}
+
+.itema6 {
+    width: 6px
+}
+
+.itema5 {
+    width: 5px
+}
+
+.itema4 {
+    width: 4px
+}
+
+.itema3 {
+    width: 3px
+}
+
+.itema2 {
+    width: 2px
+}
+
+.itema1 {
+    width: 1px
+}
+
+.divs {
+    zoom: 7000%;
+    zoom: 5;
+    zoom: 5;
+    zoom: 4;
+    zoom: 3;
+    zoom: 20;
+    zoom: 30;
+    zoom: 9
+}
+
+.so {
+    zoom: 6;
+    zoom: 2;
+    zoom: "x", 2, 3, 4, 5, 6;
+    zoom: 1, 2, 3, 4, 5, 6, 6, 7, 8;
+    zoom: 1, 2, 3, 4, 5, 6, "666";
+    zoom: 2
+}
