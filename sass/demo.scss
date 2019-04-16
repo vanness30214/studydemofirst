@@ -1,0 +1,28 @@
+$abc:red !default;
+$efg:blue;
+$img:'abc.jpg';
+$list:(100px,200px,300px);
+$map:(width:100px,height:200px,right:300px);
+.div{
+  color: red;
+
+
+}
+.div1{
+  color: red;
+  background-image: url('./ss/#{$img}');
+  width: nth($list,2);
+  height: nth($list,1);
+}
+//map
+.div2{
+  width: map_get($map,width);
+  height: map_get($map,height);
+  right: map_get($map,right);
+}
+.div3{
+  @each $key,$value in map{
+    #{$key}:$value;
+
+  }
+}
