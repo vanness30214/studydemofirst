@@ -1,4 +1,5 @@
 (function (window, document) {
+
     let Msg = function (options) {
         this._init(options);
     };
