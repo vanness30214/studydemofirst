@@ -9,60 +9,61 @@
 </body>
 </html>
 <script>
-    const arr = ["a",["b","c",["d"],[undefined,"g",["x"],["y"]]],"h",["l"]];
-    const [a,[b,c,[d],[e='e',g,[x],[y]]],h,[l]] =arr;
-//、声明三个变量，分别为x=10,y=20,z=30。
-//2、实现这三个变量的交换，得到的结果为x=30，y=10,z=20
-// 3、最后输出结果
-    //数组解构赋值
-    {
-        let x=10,y=20,z=30;
-         [x,y,z]=[z,x,y];
-         console.log(x,y,z)
-    }
-    {
-        /*对象解构赋值
-        建议：直接从对象node中来提取，即：等号右边是直接是对象node
-        2、注意对象的提取属性名要一致，数组要注意顺序
-        3、打印出结果*/
-        let node ={
-            type:'Identifier',
-            name:'ES',
-            loc:{
-                start:['line','column'],
-                end:{
-                    line:1,
-                    column:4
-                }
-            }
-        };
-        let {type,name,loc:{start:[line,column],end:{line:line1,column:column1}}}=node;
-        console.log(type,name,line,column,line1,column1)
+//     const arr = ["a",["b","c",["d"],[undefined,"g",["x"],["y"]]],"h",["l"]];
+//     const [a,[b,c,[d],[e='e',g,[x],[y]]],h,[l]] =arr;
+// //、声明三个变量，分别为x=10,y=20,z=30。
+// //2、实现这三个变量的交换，得到的结果为x=30，y=10,z=20
+// // 3、最后输出结果
+//     //数组解构赋值
+//     {
+//         let x=10,y=20,z=30;
+//          [x,y,z]=[z,x,y];
+//          console.log(x,y,z)
+//     }
+//     {
+//         /*对象解构赋值
+//         建议：直接从对象node中来提取，即：等号右边是直接是对象node
+//         2、注意对象的提取属性名要一致，数组要注意顺序
+//         3、打印出结果*/
+//         let node ={
+//             type:'Identifier',
+//             name:'ES',
+//             loc:{
+//                 start:['line','column'],
+//                 end:{
+//                     line:1,
+//                     column:4
+//                 }
+//             }
+//         };
+//         let {type,name,loc:{start:[line,column],end:{line:line1,column:column1}}}=node;
+//         console.log(type,name,line,column,line1,column1)
+//
+//     }
+//     function man({
+//         name="xiaohua",
+//         age=14,
+//         height=175
+//                }) {
+//         console.log(name,age,height)
+//
+//     }
+//     new man({
+//         name:"daxiong",
+//         height:180
+//     });
+//
+//     {
+//     let man={
+//         name:'xiaoming',
+//         age:'14',
+//     };
+//     let girl={
+//         name1:'xiaohua',
+//         age1:'15',
+//     };
+//     let obj1={...man,...girl};
+//     console.log(obj1);
+//     }
 
-    }
-    function man({
-        name="xiaohua",
-        age=14,
-        height=175
-               }) {
-        console.log(name,age,height)
-
-    }
-    new man({
-        name:"daxiong",
-        height:180
-    });
-
-    {
-    let man={
-        name:'xiaoming',
-        age:'14',
-    };
-    let girl={
-        name1:'xiaohua',
-        age1:'15',
-    };
-    let obj1={...man,...girl};
-    console.log(obj1);
-    }
 </script>
